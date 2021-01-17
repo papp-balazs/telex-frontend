@@ -1,0 +1,31 @@
+.loading {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	background-color: var(--primary-color);
+}
+
+.loading.fadeOut {
+	animation: fadeOut .5s ease-in-out .5s;
+}
+
+.loading p {
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	font-size: 80px;
+	color: rgb(255, 255, 255);
+	animation: zoom 10s ease-in-out;	
+}
+
+@keyframes zoom {
+	from { transform: scale(0.7) }
+	to { transform: scale(1) }
+}
+
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
