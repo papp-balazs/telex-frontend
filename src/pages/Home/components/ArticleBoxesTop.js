@@ -1,6 +1,4 @@
-import React from 'react';
-
-function ArticleBoxesTop({ articleBoxes = [] }) {
+function ArticleBoxesTop({ articleBoxes }) {
 	return (
 		<div className="article-boxes-wrapper">
 			{articleBoxes.map((articleBox, index) => (

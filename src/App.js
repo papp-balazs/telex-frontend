@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -6,6 +6,9 @@ import {
 } from 'react-router-dom';
 
 import Loading from './components/Loading.js';
+
+import Footer from './components/Footer.js';
+import Header from './components/Header.js';
 
 import Home from './pages/Home';
 
@@ -24,13 +27,21 @@ function App() {
 		<Router>
 			{isLoading && <Loading isFadingOut={isLoadingFadingOut} />}
 
-			<Switch>
-				<Route path="/">
-					<Home
-						setLoadingStatus={handleLoadingStatusChange}
-					/>
-				</Route>
-			</Switch>
+			<Header />
+
+			<main>
+				<div className="container">
+					<Switch>
+						<Route path="/">
+							<Home
+								setLoadingStatus={handleLoadingStatusChange}
+							/>
+						</Route>
+					</Switch>
+				</div>
+			</main>
+
+			<Footer />
 		</Router>
 	);
 }

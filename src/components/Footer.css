@@ -1,0 +1,11 @@
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	height: 100px;
+	background-color: var(--primary-color);
+}
