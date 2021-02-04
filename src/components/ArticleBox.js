@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./ArticleBox.css";
 
-function ArticleBox({ article, showImage = true }) {
+function ArticleBox({ article, showImage = false }) {
   const [articleURL, setArticleURL] = useState("");
 
   const {
@@ -68,10 +68,10 @@ function ArticleBox({ article, showImage = true }) {
         {position === 0 && (
           <div className="authors">
             {authors.map((author, index) => (
-              <>
+              <Fragment key={index}>
                 <Link to={`/author/${author.slug}`}>{author.name}</Link>
                 {index !== authors.length - 1 && ", "}
-              </>
+              </Fragment>
             ))}
           </div>
         )}

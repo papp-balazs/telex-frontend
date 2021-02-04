@@ -105,15 +105,11 @@
   color: black;
 }
 
+.article-box.normal p {
+  margin-top: 3px;
+}
+
 @media (max-width: 1200px) {
-  .article-box h1 {
-    font-size: 17px;
-  }
-
-  .article-box.normal h1 {
-    line-height: 20px;
-  }
-
   .article-box.illustrated h1 {
     line-height: 24px;
   }
@@ -124,13 +120,8 @@
   }
 
   .article-box .authors {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 10px;
-  }
-
-  .article-box p {
-    margin-top: 5px;
-    font-size: 14px;
   }
 }
 
@@ -141,10 +132,10 @@
 
   .article-box.normal .article-box--top,
   .article-box--bottom {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
   .article-box.illustrated .article-box--title {
-    padding-top: 10px;
+    padding-top: 15px;
   }
 }

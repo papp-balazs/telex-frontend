@@ -5,12 +5,13 @@
   margin-top: 25px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .article-boxes__top {
     grid-template-columns: none;
     grid-template-areas:
       "middle middle"
       "left right";
+    grid-row-gap: 0;
   }
 
   .article-boxes__top--left-column {
@@ -32,7 +33,6 @@
       "middle"
       "left"
       "right";
-    grid-gap: 0;
     margin-top: 10px;
   }
 }

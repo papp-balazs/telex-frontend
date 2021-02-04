@@ -71,9 +71,7 @@
   .nav-section__logo a {
     font-size: 35px;
   }
-}
 
-@media (max-width: 1000px) {
   .nav__main .container {
     justify-content: center;
   }

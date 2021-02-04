@@ -27,19 +27,19 @@ function ArticleBoxesTop({ articleBoxes }) {
     <div className="article-boxes__top">
       <div className="article-boxes__top--left-column">
         {leftColumnArticles.map((article, index) => (
-          <ArticleBox key={index} article={article} />
+          <ArticleBox key={index} article={article} showImage />
         ))}
       </div>
 
       <div className="article-boxes__top--middle-column">
         {middleColumnArticle.map((article, index) => (
-          <ArticleBox key={index} article={article} />
+          <ArticleBox key={index} article={article} showImage />
         ))}
       </div>
 
       <div className="article-boxes__top--right-column">
         {rightColumnArticles.map((article, index) => (
-          <ArticleBox key={index} article={article} showImage={false} />
+          <ArticleBox key={index} article={article} />
         ))}
       </div>
     </div>
