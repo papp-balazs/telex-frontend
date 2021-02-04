@@ -1,31 +1,40 @@
 .loading {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;	
-	background-color: var(--primary-color);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  z-index: 1;
 }
 
 .loading.fadeOut {
-	animation: fadeOut .5s ease-in-out .5s;
+  animation: fadeOut 0.5s ease-in-out 0.5s;
 }
 
 .loading p {
-	font-family: 'Playfair Display', serif;
-	font-weight: 900;
-	font-size: 80px;
-	color: rgb(255, 255, 255);
-	animation: zoom 10s ease-in-out;	
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  animation: zoom 10s ease-in-out;
 }
 
 @keyframes zoom {
-	from { transform: scale(0.7) }
-	to { transform: scale(1) }
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeOut {
-	from { opacity: 1; }
-	to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

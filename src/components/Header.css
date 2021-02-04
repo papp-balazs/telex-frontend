@@ -1,75 +1,85 @@
 .nav__main {
-	background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .nav__main .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 }
 
 .nav-section__support a {
-	display: block;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	color: var(--primary-color);
-	background-color: var(--teritary-color);
-	padding: 10px 0;
-	width: 160px;
-	border-radius: 1px;
-	transition: background-color .3s;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--teritary-color);
+  padding: 10px 0;
+  width: 160px;
+  border-radius: 1px;
+  transition: background-color 0.3s;
 }
 
 .nav-section__support a:hover {
-	background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 .nav-section__logo a {
-	font-family: 'Playfair Display', serif;
-	font-size: 45px;
-	font-weight: 900;
-	color: rgb(255, 255, 255);
-	text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 45px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .nav-section__social {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: center;
-	width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 160px;
 }
 
 .nav-section__social a {
-	height: 20px;
+  height: 20px;
 }
 
 .nav-section__social svg {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .nav-section__social svg > *:not([fill]) {
-	fill: rgb(255, 255, 255);
-	transition: fill .3s;
+  fill: rgb(255, 255, 255);
+  transition: fill 0.3s;
 }
 
 .nav-section__social svg:hover > *:not([fill]) {
-	fill: var(--teritary-color);
+  fill: var(--teritary-color);
 }
 
-@media (max-width: 800px) {
-	.nav__main .container {
-		justify-content: center;
-	}
+@media (max-width: 1200px) {
+  .nav__main .container {
+    height: 60px;
+  }
 
-	.nav-section__support,
-	.nav-section__social {
-		display: none;
-	}
+  .nav-section__logo a {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav__main .container {
+    justify-content: center;
+  }
+
+  .nav-section__support,
+  .nav-section__social {
+    display: none;
+  }
 }

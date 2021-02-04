@@ -1,23 +1,35 @@
 :root {
-	--primary-color: rgb(2, 42, 83);
-	--secondary-color: rgb(0, 145, 107);
-	--teritary-color: rgb(255, 230, 0);
+  --primary-color: rgb(2, 42, 83);
+  --secondary-color: rgb(0, 145, 107);
+  --teritary-color: rgb(255, 230, 0);
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Lora, serif;
+  font-family: Merriweather, serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .container {
-	width: 90%;
-	margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
 }

@@ -1,30 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import ArticleBoxesTop from './components/ArticleBoxesTop.js';
+import ArticleBoxesTop from "./components/ArticleBoxesTop.js";
 
-import TelexAPI from '../../api/TelexAPI.js';
+import TelexAPI from "../../api/TelexAPI.js";
 
 function Home({ setLoadingStatus }) {
-	const [articleBoxes, setArticleBoxes] = useState({});
-	
-	useEffect(() => {
-		(async () => {
-			const { boxes, error } = await TelexAPI.getIndexBoxes();
+  const [articleBoxes, setArticleBoxes] = useState(null);
 
-			if (error) return;
+  useEffect(() => {
+    const fetchArticleBoxesDataFromTelexAPI = async () => {
+      const { boxes, error } = await TelexAPI.getIndexBoxes();
 
-			setArticleBoxes(boxes);
-			setLoadingStatus(false);
-		})();
-	}, []);
+      if (error) return;
 
-	return (
-		<>
-			{Object.keys(articleBoxes).length !== 0 && <ArticleBoxesTop
-				articleBoxes={articleBoxes.topBoxItems}
-			/>}
-		</>
-	);
+      setArticleBoxes(boxes);
+      setLoadingStatus(false);
+    };
+
+    fetchArticleBoxesDataFromTelexAPI();
+  }, [setLoadingStatus]);
+
+  return (
+    <>
+      {articleBoxes && (
+        <div className="article-boxes--wrapper">
+          <ArticleBoxesTop articleBoxes={articleBoxes.topBoxItems} />
+        </div>
+      )}
+    </>
+  );
 }
 
 export default Home;
